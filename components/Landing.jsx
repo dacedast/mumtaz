@@ -20,7 +20,7 @@ const Landing = () => {
       : router.locale === "ru"
       ? "Добро пожаловать в"
       : router.locale === "cs"
-      ? "Vitejte v"
+      ? "Vítejte v"
       : "";
   let text1 =
     router.locale === "en"
