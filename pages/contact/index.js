@@ -75,11 +75,11 @@ const Contact = () => {
             Jabloňová 2136/11, Praha 10, 106 00
           </p>
           <h2 className="text-2xl font-semibold mb-2 text-center">{text3}</h2>
-          <p className="text-lg mb-4 text-center">{text4} 11:00 - 23:00</p>
+          <p className="text-lg mb-4 text-center">{text4} 11:00 - 22:00</p>
           <h2 className="text-2xl font-semibold mb-2 text-center">{text5}</h2>
           <p className="text-lg mb-4 text-center">Phone: +420 605 77 72 73</p>
           <p className="text-lg mb-4 text-center">
-            Email: info@mumtaz-restaurant.cz
+            Email: mumtazrestaurace@gmail.com
           </p>
           <div className="flex justify-center gap-5 text-black mb-5">
             <a href="">

@@ -94,7 +94,7 @@ const Landing = () => {
             <HiOutlineLocationMarker size={20} />
             <p>Jabloňová 2136/11, Praha</p>
           </div>
-          <p className="text-white text-center">{addressText} 11:00 - 23:00</p>
+          <p className="text-white text-center">{addressText} 11:00 - 22:00</p>
         </div>
         <LinkScroll
           to="features"

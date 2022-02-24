@@ -42,7 +42,7 @@ const Footer = () => {
               <HiOutlineLocationMarker size={20} />
               <p className="text-center">Jabloňová 2136/11, Praha</p>
             </div>
-            <p className="text-white text-center">{text4} 11:00 - 23:00</p>
+            <p className="text-white text-center">{text4} 11:00 - 22:00</p>
           </div>
         </div>
         <div className="col-span-1 flex flex-col justify-center items-center">
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
         <div className="col-span-1 flex flex-col justify-center items-center text-white">
           <p className="text-center">+420 605 77 72 73</p>
-          <p className="text-center">info@mumtaz-restaurant.cz</p>
+          <p className="text-center">mumtazrestaurace@gmail.com</p>
         </div>
       </div>
     </div>

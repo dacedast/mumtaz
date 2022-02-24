@@ -16,17 +16,17 @@ const FeaturesPage = () => {
     router.locale === "en"
       ? "We are more than just a restaurant"
       : router.locale === "ru"
-      ? "Мы больше, чем просто ресторан"
+      ? "Мы больше, чем ресторан"
       : router.locale === "cs"
       ? "Nejsme jen restaurace"
       : "";
   let desc =
     router.locale === "en"
-      ? "Enjoy the atmosphere and flavors of Central Asia in the heart of Europe, in the capital of the Czech Republic, Prague."
+      ? "Enjoy the atmosphere and flavors of Uzbek cuisine in the heart of Europe, in the capital of the Czech Republic, Prague."
       : router.locale === "ru"
-      ? "Насладитесь атмосферой и вкусами блюд Центральной Азии в сердце Европыб в столице Чешской Республики, в Праге"
+      ? "Насладитесь атмосферой и вкусами блюд Узбекской кухни в сердце Европы, в столице Чешской Республики, в Праге"
       : router.locale === "cs"
-      ? "Vychutnejte si atmosféru a chutě střední Asie v srdci Evropy, v hlavním městě České republiky, v Praze."
+      ? "Vychutnejte si atmosféru a chutě Uzbecké  v srdci Evropy, v hlavním městě České republiky, v Praze."
       : "";
   let text1 =
     router.locale === "en"
