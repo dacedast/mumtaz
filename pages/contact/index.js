@@ -119,10 +119,12 @@ const Contact = () => {
         <h1 className="text-center text-4xl text-[#003934] font-semibold mb-5">
           {text6}
         </h1>
-        <div className="relative">
+        <div className="w-full h-[400px]">
           <ReactPlayer
+            controls={false}
+            playIcon
             width="100%"
-            playing={false}
+            playing={true}
             url="https://www.youtube.com/watch?v=sqpg1qzJCGQ?mode=opaque&rel=0&autohide=1&showinfo=0&wmode=transparent"
             height="100%"
           />
