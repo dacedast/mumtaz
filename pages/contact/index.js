@@ -5,6 +5,7 @@ import { FaTelegramPlane, FaFacebookF } from "react-icons/fa";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import ReactPlayer from "react-player";
 
 const Contact = () => {
   useEffect(() => {
@@ -114,16 +115,18 @@ const Contact = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center md:px-10 px-4">
         <h1 className="text-center text-4xl text-[#003934] font-semibold mb-5">
           {text6}
         </h1>
-        <video controls width="800px" data-aos="zoom-in" data-aos-once="true">
-          <source
-            src="https://player.vimeo.com/external/369639344.sd.mp4?s=b892fce959245aa4ae7ab08bc4b1af2766acdf4e&profile_id=139&oauth2_token_id=57447761"
-            type="video/mp4"
-          ></source>
-        </video>
+        <div className="relative">
+          <ReactPlayer
+            width="100%"
+            playing={false}
+            url="https://www.youtube.com/watch?v=sqpg1qzJCGQ?mode=opaque&rel=0&autohide=1&showinfo=0&wmode=transparent"
+            height="100%"
+          />
+        </div>
       </div>
     </div>
   );

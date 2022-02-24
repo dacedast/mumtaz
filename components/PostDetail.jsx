@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { BsArrowLeftCircle } from "react-icons/bs";
-
+import ReactPlayer from "react-player";
 const PostDetail = ({ post }) => {
   return (
     <div className="w-full h-full md:px-10 px-4 md:py-10 py-4">
@@ -18,13 +18,16 @@ const PostDetail = ({ post }) => {
               className="object-cover h-full w-full h-full lg:h-[80vh] rounded-lg  shadow-lg "
             />
           ) : (
-            <video
-              src={post.videoUrl}
-              muted
-              autoPlay
-              loop
-              className="w-full h-full object-cover rounded-lg"
-            ></video>
+            <div className="w-full h-[400px]">
+              <ReactPlayer
+                controls={false}
+                playIcon
+                width="100%"
+                playing={true}
+                url={post.videoUrl}
+                height="100%"
+              />
+            </div>
           )}
         </div>
         <div className="md:w-1/2 w-full flex flex-col justify-around">
