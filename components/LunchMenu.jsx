@@ -87,11 +87,7 @@ const LunchMenu = () => {
         className="w-1/4 absolute right-0 "
       />
       <BiDish size={100} className="text-white" />
-      <h1
-        className="text-center md:text-5xl text-3xl font-semibold text-white mb-4"
-        data-aos="zoom-in"
-        data-aos-once="true"
-      >
+      <h1 className="text-center md:text-5xl text-3xl font-semibold text-white mb-4">
         {text1}
       </h1>
       {lunchMenu.map((item, index) => (

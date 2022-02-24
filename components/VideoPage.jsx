@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const VideoPage = () => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
   useEffect(() => {
     Aos.init({ duration: 700 });
   }, []);
@@ -46,6 +50,7 @@ const VideoPage = () => {
       <video
         src="https://player.vimeo.com/external/412306034.sd.mp4?s=ac6a7908e7deec6c8c5d9ed21c0b95debe3251cb&profile_id=165&oauth2_token_id=57447761"
         muted
+        ref={videoRef}
         autoPlay
         loop
         className="h-full w-full absolute z-[-1] object-cover "

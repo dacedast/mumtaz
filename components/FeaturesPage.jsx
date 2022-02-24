@@ -83,28 +83,28 @@ const FeaturesPage = () => {
           <h1
             className=" text-[#003934] md:text-5xl text-4xl font-semibold mb-5"
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
           >
             {title}
           </h1>
           <p
             className="text-[#003934] opacity-70 mb-5"
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
           >
             {desc}
           </p>
           <div
             className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
           >
             <AiOutlinePhone className="text-white absolute" size={25} />
             <h1 className="text-center">{text1}</h1>
           </div>
           <div
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
             className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
           >
             <FaLeaf className="text-white absolute" size={20} />
@@ -112,7 +112,7 @@ const FeaturesPage = () => {
           </div>
           <div
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
             className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
           >
             <RiCheckboxCircleLine className="text-white absolute" size={25} />
@@ -120,7 +120,7 @@ const FeaturesPage = () => {
           </div>
           <div
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
             className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
           >
             <AiOutlineClockCircle className="text-white absolute" size={25} />
@@ -128,7 +128,7 @@ const FeaturesPage = () => {
           </div>
           <div
             data-aos-once="true"
-            data-aos="fade-right"
+            data-aos="fade-in"
             className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
           >
             <FaBookMedical className="text-white absolute" size={25} />
@@ -137,7 +137,7 @@ const FeaturesPage = () => {
         </div>
         <div
           data-aos-once="true"
-          data-aos="fade-right"
+          data-aos="fade-in"
           className="lg:w-1/2 w-full flex flex-col items-center"
         >
           <img
@@ -145,7 +145,7 @@ const FeaturesPage = () => {
             alt="povar"
             className="rounded-lg float-right shadow-xl mb-3"
             data-aos-once="true"
-            data-aos="fade-left"
+            data-aos="fade-in"
           />
           <Link href="/gallery" className="text-center ">
             <p className="underline text-[#003934] cursor-pointer">{text6}</p>
