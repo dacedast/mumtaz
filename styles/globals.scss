@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.sidebar {
+  background-color: #003934;
+  animation: slideIn 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.burger {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  overflow: hidden;
+}
+.burger1,
+.burger2,
+.burger3 {
+  width: 2rem;
+  height: 0.13rem;
+  background-color: #fff;
+  border-radius: 5px;
+  transform-origin: 1px;
+  transition: all 0.3s ease-out;
+}
+
+.loader {
+  overflow: hidden;
+  animation: slideOut 2s ease-in-out;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
