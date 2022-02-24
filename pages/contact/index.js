@@ -68,7 +68,7 @@ const Contact = () => {
         {text1}
       </h1>
       <div className="flex md:flex-row flex-col justify-between items-center gap-20 mb-10">
-        <div className="w-full" data-aos="fade-right" data-aos-once="true">
+        <div className="w-full" data-aos="fade-in" data-aos-once="true">
           <h2 className="text-2xl font-semibold mb-2 text-center">{text2}</h2>
           <p className="text-lg mb-4 text-center">
             Jabloňová 2136/11, Praha 10, 106 00
@@ -101,7 +101,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <div className="w-full" data-aos="fade-left" data-aos-once="true">
+        <div className="w-full" data-aos="fade-in" data-aos-once="true">
           <a
             href="https://www.google.com/maps/place/Jablo%C5%88ov%C3%A1+11,+106+00+Praha+10/@50.0569459,14.493834,17z/data=!3m1!4b1!4m5!3m4!1s0x470b93abe80bc17d:0x9c0dd8a732af6a2!8m2!3d50.0569425!4d14.4960228"
             target="_blank"
