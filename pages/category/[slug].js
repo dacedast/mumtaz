@@ -2,11 +2,17 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { BsArrowLeftCircle } from "react-icons/bs";
-
+import { useRouter } from "next/router";
 import { getCategories, getCategoryPost } from "../../services";
 import { PostCard } from "../../components";
+import Loader from "../../components/Loader";
 
 const CategoryPost = ({ posts }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
   const [category, setCategory] = useState([]);
   useEffect(() => {
     posts.map((post) => {
