@@ -122,10 +122,9 @@ const Contact = () => {
         <div className="w-full h-[400px]">
           <ReactPlayer
             controls={false}
-            playIcon
             width="100%"
             playing={true}
-            url="https://www.youtube.com/watch?v=sqpg1qzJCGQ?mode=opaque&rel=0&autohide=1&showinfo=0&wmode=transparent"
+            url="https://youtu.be/tuVlIl0GcnM?mode=opaque&rel=0&autohide=1&showinfo=0&wmode=transparent"
             height="100%"
           />
         </div>
