@@ -94,14 +94,16 @@ const FeaturesPage = () => {
           >
             {desc}
           </p>
-          <div
-            className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
-            data-aos-once="true"
-            data-aos="fade-in"
-          >
-            <AiOutlinePhone className="text-white absolute" size={25} />
-            <h1 className="text-center">{text1}</h1>
-          </div>
+          <Link href="/contact">
+            <div
+              className="bg-[#003934] text-white cursor-pointer text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
+              data-aos-once="true"
+              data-aos="fade-in"
+            >
+              <AiOutlinePhone className="text-white absolute" size={25} />
+              <h1 className="text-center">{text1}</h1>
+            </div>
+          </Link>
           <div
             data-aos-once="true"
             data-aos="fade-in"

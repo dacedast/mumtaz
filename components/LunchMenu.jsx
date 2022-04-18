@@ -26,46 +26,6 @@ const LunchMenu = () => {
       : router.locale === "cs"
       ? "Salat + Polevka + Hlavní jídlo + Chleb + Nápoj jenom za"
       : "";
-  let text3 =
-    router.locale === "en"
-      ? "Salad"
-      : router.locale === "ru"
-      ? "Салат"
-      : router.locale === "cs"
-      ? "Salat"
-      : "";
-  let text4 =
-    router.locale === "en"
-      ? "Soup"
-      : router.locale === "ru"
-      ? "Суп"
-      : router.locale === "cs"
-      ? "Salat"
-      : "";
-  let text5 =
-    router.locale === "en"
-      ? "Main dish"
-      : router.locale === "ru"
-      ? "Главное блюдо"
-      : router.locale === "cs"
-      ? "Hlavní jídlo"
-      : "";
-  let text6 =
-    router.locale === "en"
-      ? "Dough"
-      : router.locale === "ru"
-      ? "Хлеб"
-      : router.locale === "cs"
-      ? "Chleb"
-      : "";
-  let text7 =
-    router.locale === "en"
-      ? "Drink"
-      : router.locale === "ru"
-      ? "Напиток"
-      : router.locale === "cs"
-      ? "Nápoj"
-      : "";
   const [lunchMenu, setLunchMenu] = useState([]);
   useEffect(() => {
     getLunchMenu().then((newLunchMenu) => setLunchMenu(newLunchMenu));
@@ -91,44 +51,19 @@ const LunchMenu = () => {
         {text1}
       </h1>
       {lunchMenu.map((item, index) => (
-        <div key={index}>
+        <div key={index} className="w-full flex flex-col items-center">
           <p className="text-center text-lg text-white mb-5">
             {text2}{" "}
             <span className="text-[#E1BF72] font-bold text-xl">
               {item.priceLunch} Kč
             </span>
           </p>
-          <div className="flex justify-between w-full flex-col items-center">
-            <div className="mb-5">
-              <h2 className="text-3xl text-[#E1BF72] mb-3 text-center">
-                {text3}
-              </h2>
-              <p className="text-white text-center">{item.salad}</p>
-            </div>
-            <div className="mb-5">
-              <h2 className="text-3xl text-[#E1BF72] mb-3 text-center">
-                {text4}
-              </h2>
-              <p className="text-white mb-1 text-center">{item.soup}</p>
-            </div>
-            <div className="mb-5">
-              <h2 className="text-3xl text-[#E1BF72] mb-3 text-center">
-                {text5}
-              </h2>
-              <p className="text-white mb-1 text-center">{item.main}</p>
-            </div>
-            <div className="mb-5">
-              <h2 className="text-3xl text-[#E1BF72] mb-3 text-center">
-                {text6}
-              </h2>
-              <p className="text-white mb-1 text-center">{item.dough}</p>
-            </div>
-            <div className="mb-5">
-              <h2 className="text-3xl text-[#E1BF72] mb-3 text-center">
-                {text7}
-              </h2>
-              <p className="text-white mb-1 text-center">{item.drink}</p>
-            </div>
+          <div className="flex justify-center text-center items-center lg:w-1/2 lg:h-1/2 w-full h-full">
+            <img
+              src={item.lunchImage.url}
+              alt="lunchmenu"
+              className="object-cover w-full h-full"
+            />
           </div>
         </div>
       ))}

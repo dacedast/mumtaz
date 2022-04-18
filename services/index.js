@@ -96,12 +96,10 @@ export const getLunchMenu = async () => {
   const query = gql`
     query GetLunchMenu {
       lunchMenus {
-        dough
-        drink
         priceLunch
-        salad
-        soup
-        main
+        lunchImage {
+          url
+        }
       }
     }
   `;

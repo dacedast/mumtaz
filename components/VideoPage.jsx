@@ -48,7 +48,7 @@ const VideoPage = () => {
         </p>
       </Link>
       <video
-        src="https://player.vimeo.com/external/412306034.sd.mp4?s=ac6a7908e7deec6c8c5d9ed21c0b95debe3251cb&profile_id=165&oauth2_token_id=57447761"
+        src="https://cdn.videvo.net/videvo_files/video/free/2015-05/large_watermarked/FoodPack1_12_Videvo_preview.mp4"
         muted
         ref={videoRef}
         autoPlay
