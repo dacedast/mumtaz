@@ -42,7 +42,7 @@ const Menu = ({ posts }) => {
           </Link>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 h-full">
         {posts.map((post, index) => (
           <PostCard post={post.node} key={index} />
         ))}

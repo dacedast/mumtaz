@@ -21,7 +21,7 @@ const PostCard = ({ post }) => {
       : "";
   return (
     <div
-      className="md:col-span-3 col-span-1  w-full h-full border-black"
+      className="md:col-span-3 col-span-1  w-full h-full  border-black block"
       data-aos="zoom-in"
       data-aos-once="true"
     >
@@ -37,7 +37,7 @@ const PostCard = ({ post }) => {
             className="h-60 object-cover w-full md:w-1/3 rounded-full cursor-pointer"
           />
           <div className=" flex flex-col w-full justify-between">
-            <h2 className="lg:text-3xl text-2xl font-bold mb-2 text-center py-2 text-[#003934] cursor-pointer">
+            <h2 className="lg:text-xl text-2xl font-bold mb-2 text-center py-2 text-[#003934] cursor-pointer">
               {post.title}
             </h2>
             <h3 className="text-center mb-4 text-lg font-semibold">
