@@ -6,7 +6,15 @@ import { FaLeaf, FaBookMedical } from "react-icons/fa";
 import { useRouter } from "next/router";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Pagination, A11y } from "swiper";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 const FeaturesPage = () => {
   useEffect(() => {
     Aos.init({ duration: 700 });
@@ -30,11 +38,11 @@ const FeaturesPage = () => {
       : "";
   let text1 =
     router.locale === "en"
-      ? "Booking by phone"
+      ? "Booking by phone/insta"
       : router.locale === "ru"
-      ? "Резервация по телефону"
+      ? "Резервация по телефону/insta"
       : router.locale === "cs"
-      ? "Rezervovat telefonicky"
+      ? "Rezervovat telefonicky/insta"
       : "";
   let text2 =
     router.locale === "en"
@@ -54,11 +62,11 @@ const FeaturesPage = () => {
       : "";
   let text4 =
     router.locale === "en"
-      ? "Working everyday"
+      ? "Lunch menu"
       : router.locale === "ru"
-      ? "Работаем ежедневно"
+      ? "Ланч меню"
       : router.locale === "cs"
-      ? "K dizpozici každý den"
+      ? "Denní menu"
       : "";
   let text5 =
     router.locale === "en"
@@ -126,7 +134,13 @@ const FeaturesPage = () => {
             className="bg-[#003934] text-white text-center rounded-lg px-4 py-2 lg:w-1/2 w-full mb-4"
           >
             <AiOutlineClockCircle className="text-white absolute" size={25} />
-            <h1 className="text-center">{text4}</h1>
+            <a
+              href="https://www.instagram.com/mumtaz.cz/"
+              target="_blank"
+              className="text-center"
+            >
+              {text4}
+            </a>
           </div>
           <div
             data-aos-once="true"
@@ -140,15 +154,43 @@ const FeaturesPage = () => {
         <div
           data-aos-once="true"
           data-aos="fade-in"
-          className="lg:w-1/2 w-full flex flex-col items-center"
+          className="lg:w-1/2 w-full flex flex-col items-center lg:h-[500px] h-full"
         >
-          <img
-            src="/features.jpg"
-            alt="povar"
-            className="rounded-lg float-right shadow-xl mb-3"
-            data-aos-once="true"
-            data-aos="fade-in"
-          />
+          <Swiper
+            spaceBetween={2}
+            slidesPerView={1}
+            className="w-full h-full"
+            modules={[Pagination, A11y]}
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>
+              <img
+                src="/features.jpg"
+                alt="povar"
+                className="rounded-lg float-right shadow-xl object-cover"
+                data-aos-once="true"
+                data-aos="fade-in"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/ss.jpg"
+                alt="povar"
+                className="rounded-lg float-right shadow-xl object-cover"
+                data-aos-once="true"
+                data-aos="fade-in"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/tapchan.jpg"
+                alt="povar"
+                className="rounded-lg float-right shadow-xl object-cover"
+                data-aos-once="true"
+                data-aos="fade-in"
+              />
+            </SwiperSlide>
+          </Swiper>
           <Link href="/gallery" className="text-center ">
             <p className="underline text-[#003934] cursor-pointer">{text6}</p>
           </Link>

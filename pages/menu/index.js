@@ -28,14 +28,14 @@ const Menu = ({ posts }) => {
       <h1 className="text-center text-[#003934] text-3xl py-5 font-bold uppercase">
         {text1}
       </h1>
-      <div className="grid grid-cols-12 gap-3 mb-4">
+      <div className="flex justify-center items-center flex-wrap gap-2 mb-4">
         {categories.map((category, index) => (
           <Link key={category.slug} href={`/category/${category.slug}`}>
             <div
-              className="md:col-span-2 col-span-4 text-center md:px-3 px-1 py-2 bg-[#003934] cursor-pointer rounded-full hover:bg-[#00524B] duration-200"
+              className="text-center md:px-5 px-1 py-2 bg-[#003934] cursor-pointer rounded-full hover:bg-[#00524B] duration-200"
               key={index}
             >
-              <span className="md:text-xl text-lg cursor-pointer mb-3 text-white font-bold">
+              <span className="md:text-xl w-full text-md cursor-pointer  text-white font-bold">
                 {category.name}
               </span>
             </div>

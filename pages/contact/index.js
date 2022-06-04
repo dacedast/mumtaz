@@ -60,6 +60,15 @@ const Contact = () => {
       : router.locale === "cs"
       ? "Nemůžete nás najít? Podívejte se na video"
       : "";
+  let textHours =
+    router.locale === "en"
+      ? "Except Wednesday"
+      : router.locale === "ru"
+      ? "Кроме Среды"
+      : router.locale === "cs"
+      ? "Středa zavřeno"
+      : "";
+
   return (
     <div className="md:px-10 px-4 py-10 w-full h-full">
       <Head>
@@ -75,7 +84,9 @@ const Contact = () => {
             Jabloňová 2136/11, Praha 10, 106 00
           </p>
           <h2 className="text-2xl font-semibold mb-2 text-center">{text3}</h2>
-          <p className="text-lg mb-4 text-center">{text4} 11:00 - 22:00</p>
+          <p className="text-lg mb-4 text-center">
+            {text4} 11:00 - 23:00 {textHours}
+          </p>
           <h2 className="text-2xl font-semibold mb-2 text-center">{text5}</h2>
           <p className="text-lg mb-4 text-center">Phone: +420 605 77 72 73</p>
           <p className="text-lg mb-4 text-center">
@@ -123,7 +134,7 @@ const Contact = () => {
           <ReactPlayer
             controls={false}
             width="100%"
-            playing={true}
+            playing={false}
             url="https://youtu.be/tuVlIl0GcnM?mode=opaque&rel=0&autohide=1&showinfo=0&wmode=transparent"
             height="100%"
           />

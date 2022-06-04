@@ -40,11 +40,11 @@ const Landing = () => {
       : "";
   let addressText =
     router.locale === "en"
-      ? "Everyday"
+      ? "Everyday, except Wednesday"
       : router.locale === "ru"
-      ? "Ежедневно"
+      ? "Ежедневно, кроме Среды"
       : router.locale === "cs"
-      ? "Každý den"
+      ? "Každý den, Středa zavřeno"
       : "";
   return (
     <div className="h-[100vh-120px] bg-tapchan-img bg-contain md:pt-[150px] pt-[50px] md:px-10 px-4">
@@ -94,7 +94,7 @@ const Landing = () => {
             <HiOutlineLocationMarker size={20} />
             <p>Jabloňová 2136/11, Praha</p>
           </div>
-          <p className="text-white text-center">{addressText} 11:00 - 22:00</p>
+          <p className="text-white text-center">{addressText} 11:00 - 23:00</p>
         </div>
         <LinkScroll
           to="features"
